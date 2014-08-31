@@ -1,0 +1,11 @@
+#!/bin/sh
+if mountpoint -q /target; then
+	echo "Installing baseimage tools to /target"
+	chmod +x /tools/*
+	cp /tools/* /target
+else
+	echo "/target is not a mountpoint."
+	echo "You can either:"
+	echo "- re-run this container with -v /usr/bin:/target"
+	echo "- extract the tools (located at /tools)"
+fi
