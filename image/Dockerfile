@@ -1,5 +1,5 @@
-FROM ubuntu:14.04
-MAINTAINER Phusion <info@phusion.nl>
+FROM dockerimages/ubuntu-core:14.04
+MAINTAINER Frank Lemanschik
 
 ENV HOME /root
 RUN mkdir /build
